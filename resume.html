@@ -43,11 +43,11 @@ describe 'Oliver Switzer' do
       it 'important points' do
         expect(oliver.past_jobs[:pivotal].description).to eq(%q(
           - Apply extreme programming practices including pair programming and test-driven development
-          across a variety of technology stacks and projects.
-          - Help identify what new client projects and employees Pivotal will take on.
-          - Facilitate weekly retrospectives, iteration planning meetings and office-wide discussions about core XP/LEAN/Agile practices.
+          across a variety of technology stacks and projects
+          - Help identify what new client projects and employees Pivotal will take on
+          - Facilitate weekly retrospectives, iteration planning meetings and office-wide discussions about core XP/LEAN/Agile practices
           - Act as engineering lead on multiple projects, involving conveying core domain to rest of team, scheduling one-on-ones with
-          individual team members and facilitating communication between development team and client stakeholders.
+          individual team members and facilitating communication between development team and client stakeholders
         ))
       end
     end
@@ -71,8 +71,8 @@ describe 'Oliver Switzer' do
         expect(oliver.past_jobs[:how_about_we].description).to eq(%q(
           - Rails stack with Backbone/SASS/HAML front-end.
           - Use TDD with Rspec and Capybara when writing code for both front and back-end site functionality
-          - Write A/B tests to ensure user acceptance of most new features.
-          - Write scripts to upload and resize images on AWS using Sidekiq worker queues.
+          - Write A/B tests to ensure user aInstitutee of most new features
+          - Write scripts to upload and resize images on AWS using Sidekiq worker queues
           - Create models that implement worker queues for sending SMS to users using Twilio API
           - Query Google Maps API to generate static google maps images from geographic coordinates
         ))
@@ -89,6 +89,17 @@ describe 'Oliver Switzer' do
 
       it 'Scholarships' do
         expect(oliver.education['undergraduate'].scholarship).to eq('Full-ride Distinguished Scientist Scholarship (DSS)')
+      end
+    end
+
+    describe 'Post-undergraduate' do
+      it 'Student at Project Breaker/Stanford Institue of Design' do
+        expect(oliver.education[:post_undergraduate].description).to eq(%q(
+          - Worked with IDEO, TED, Shapeways, MakerBot, littleBits, others; prototyped, tested,
+          and refined concepts for manufacturing products
+
+          http://futureofstuffchallenge.org/
+        ))
       end
     end
   end
