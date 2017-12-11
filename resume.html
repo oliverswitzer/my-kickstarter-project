@@ -46,7 +46,7 @@ describe 'Oliver Switzer' do
           across a variety of technology stacks and projects.
           - Help identify what new client projects and employees Pivotal will take on.
           - Facilitate weekly retrospectives, iteration planning meetings and office-wide discussions about core XP/LEAN/Agile practices.
-          - Act as “Anchor” (engineering lead) on multiple projects, involving conveying core domain to rest of team, scheduling one-on-ones with
+          - Engineering lead on multiple projects, involving conveying core domain to rest of team, scheduling one-on-ones with
           individual team members and facilitating communication between development team and client stakeholders.
         ))
       end
@@ -84,6 +84,7 @@ describe 'Oliver Switzer' do
     describe 'Undergraduate School' do
       it 'Bard College' do
         expect(oliver.education[:undergraduate].name).to eq('Bard College')
+        expect(oliver.education[:undergraduate].degree).to eq('BA Physics')
       end
 
       it 'Scholarships' do
