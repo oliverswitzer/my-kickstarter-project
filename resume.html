@@ -42,7 +42,7 @@ describe 'Oliver Switzer' do
     describe 'Pivotal (Aug 15, 2015 - Present)' do
       it 'important points' do
         expect(oliver.past_jobs[:pivotal].description).to eq(%q(
-          - Apply extreme programming (XP) practices including pair programming and test-driven development
+          - Apply extreme programming practices including pair programming and test-driven development
           across a variety of technology stacks and projects.
           - Help identify what new client projects and employees Pivotal will take on.
           - Facilitate weekly retrospectives, iteration planning meetings and office-wide discussions about core XP/LEAN/Agile practices.
@@ -57,7 +57,7 @@ describe 'Oliver Switzer' do
         expect(oliver.past_jobs[:little_bits].description).to eq(%q(
           - Built out RESTful mobile app API endpoints for companies first e-commerce mobile application
           - Built backend of Quirky-like voting app called bitLab that uses state machine and voting logic to track
-          state of “bit ideas” that are voted upon and curated
+          state of ideas that are voted upon and curated
           - Worked with React to create first interactive littleBits circuit simulator and build parts of the CMS
           - Helped start NYC's first React Meetup hosted at the littleBit's office
           - Used both Memcached and Redis-based caching for site tracking and increasing site performance
@@ -76,6 +76,18 @@ describe 'Oliver Switzer' do
           - Create models that implement worker queues for sending SMS to users using Twilio API
           - Query Google Maps API to generate static google maps images from geographic coordinates
         ))
+      end
+    end
+  end
+
+  describe 'Education' do
+    describe 'Undergraduate School' do
+      it 'Bard College' do
+        expect(oliver.education[:undergraduate].name).to eq('Bard College')
+      end
+
+      it 'Scholarships' do
+        expect(oliver.education['undergraduate'].scholarship).to eq('Full-ride Distinguished Scientist Scholarship (DSS)')
       end
     end
   end
